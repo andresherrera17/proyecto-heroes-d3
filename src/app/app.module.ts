@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.component';
+import { RouterModule } from '@angular/router';
 
 //Decorador: Empieza con @, es una funcion comun y corriente
 @NgModule({
@@ -16,12 +17,13 @@ import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.componen
     LoginComponent,
     AboutComponent,
     NavbarComponent,
-    EjemplosPipesComponent,
+    EjemplosPipesComponent
   ],
   //Importar las librerias
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   //Declarar nuestros servicios
   providers: [],
