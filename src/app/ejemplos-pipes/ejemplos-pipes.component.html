@@ -77,7 +77,31 @@
        <!-- Se van a crear un pipe('Capitalizar') 
         AnDreS hERRerA - Andres Herrera
       -->
+      <tr>
+        <td>Promesa {{ valorPromesa }}</td>
+        <td>async</td>
+        <td>{{ valorPromesa | async }}</td>
+       </tr>
 
+       <tr>
+        <td>{{ heroe }}</td>
+        <td>json</td>
+        <td> 
+          <pre>
+          {{ heroe | json }}
+        </pre>
+        </td>
+       </tr>
+       <tr>
+        <td>Promesa {{ valorPromesa }}</td>
+        <td><button (click)="darClick()">Click</button> </td>
+        <td>{{ valorPromesa | async }}</td>
+       </tr> 
+
+       <!-- Actividad Contraseña:
+        - Van un valor *********
+        - Click a un boton (activar/desactivar)
+        - Andres123 -->
     </tbody>
   </table>
 

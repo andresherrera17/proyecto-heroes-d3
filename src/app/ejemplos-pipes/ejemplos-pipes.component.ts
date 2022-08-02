@@ -13,9 +13,28 @@ export class EjemplosPipesComponent implements OnInit {
   salario:number = 1234.5;
   fecha:Date = new Date();
 
-  constructor() { }
+  valorPromesa = new Promise<string>((resolve) => {
+    setTimeout(() => {
+      resolve('Llego la data');
+    }, 3000);
+  });
+
+  heroe =  {
+    nombre: 'logan',
+    edad: 1000,
+    otrosNombres: {
+      nombre: 'wolverine' 
+    }
+  }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  darClick(){
+    alert('Bienvenido');
   }
 
 }
