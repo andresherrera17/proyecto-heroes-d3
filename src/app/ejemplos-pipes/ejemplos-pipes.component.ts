@@ -12,6 +12,7 @@ export class EjemplosPipesComponent implements OnInit {
   porcentaje: number = 0.25;
   salario:number = 1234.5;
   fecha:Date = new Date();
+  isShow:boolean = false;
 
   valorPromesa = new Promise<string>((resolve) => {
     setTimeout(() => {

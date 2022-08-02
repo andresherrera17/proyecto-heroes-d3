@@ -9,6 +9,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.component';
 import { RouterModule } from '@angular/router';
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { ContrasenaPipe } from './pipes/contrasena.pipe';
 
 //Decorador: Empieza con @, es una funcion comun y corriente
 @NgModule({
@@ -19,7 +20,8 @@ import { MayusculasPipe } from './pipes/mayusculas.pipe';
     AboutComponent,
     NavbarComponent,
     EjemplosPipesComponent,
-    MayusculasPipe
+    MayusculasPipe,
+    ContrasenaPipe
   ],
   //Importar las librerias
   imports: [

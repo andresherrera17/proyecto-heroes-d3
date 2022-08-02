@@ -97,6 +97,13 @@
         <td><button (click)="darClick()">Click</button> </td>
         <td>{{ valorPromesa | async }}</td>
        </tr> 
+       <tr>
+        <td>Actividad Contraseña: {{ isShow }}</td>
+        <td><button (click)="isShow = !isShow" class="btn btn-primary">Activar/Desactivar</button> </td>
+        <!-- <td>{{ nombre | contrasena:isShow }}</td> -->
+        <td> <input type="text" [value]="nombre | contrasena:isShow"> </td>
+       </tr> 
+
 
        <!-- Actividad Contraseña:
         - Van un valor *********
