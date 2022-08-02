@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioNgmodelComponent implements OnInit {
 
+  nombre:string = "";
+  apellido:string = "";
+
   constructor() { }
 
   ngOnInit(): void {

@@ -12,6 +12,7 @@ import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { FormularioNgmodelComponent } from './formularios/formulario-ngmodel/formulario-ngmodel.component';
 import { FormularioReactivoComponent } from './formularios/formulario-reactivo/formulario-reactivo.component';
+import { FormsModule } from '@angular/forms';
 
 //Decorador: Empieza con @, es una funcion comun y corriente
 @NgModule({
@@ -31,7 +32,8 @@ import { FormularioReactivoComponent } from './formularios/formulario-reactivo/f
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   //Declarar nuestros servicios
   providers: [],
