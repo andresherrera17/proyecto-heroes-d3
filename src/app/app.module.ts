@@ -10,6 +10,8 @@ import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.componen
 import { RouterModule } from '@angular/router';
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
+import { FormularioNgmodelComponent } from './formularios/formulario-ngmodel/formulario-ngmodel.component';
+import { FormularioReactivoComponent } from './formularios/formulario-reactivo/formulario-reactivo.component';
 
 //Decorador: Empieza con @, es una funcion comun y corriente
 @NgModule({
@@ -21,7 +23,9 @@ import { ContrasenaPipe } from './pipes/contrasena.pipe';
     NavbarComponent,
     EjemplosPipesComponent,
     MayusculasPipe,
-    ContrasenaPipe
+    ContrasenaPipe,
+    FormularioNgmodelComponent,
+    FormularioReactivoComponent
   ],
   //Importar las librerias
   imports: [
