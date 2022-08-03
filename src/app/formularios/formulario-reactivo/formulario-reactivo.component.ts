@@ -12,4 +12,7 @@ export class FormularioReactivoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  guardar(){
+    
+  }
 }
