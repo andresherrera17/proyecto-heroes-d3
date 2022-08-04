@@ -32,7 +32,7 @@ export class FormularioReactivoComponent implements OnInit {
   }
 
   validarContrasena(control: AbstractControl){
-    const contrasena:string = control.value;
+    const contrasena:string = control.value || '' ;
     let error = null;
     if(!contrasena.includes('$')){
       error = { pesos:'Es requerido el signo pesos' }
@@ -45,11 +45,16 @@ export class FormularioReactivoComponent implements OnInit {
   }
 
   guardar(){
+    if(this.form.invalid){
+      this.form.markAllAsTouched();
+      return;
+    }
+    //Guardar
     console.log(this.form);
   }
 
   get usuarioRequired(){
-    if(this.nombre?.errors){
+    if(this.nombre?.errors && this.nombre.touched){
       return this.nombre?.errors["required"];
     }else{
       return false;
@@ -59,11 +64,15 @@ export class FormularioReactivoComponent implements OnInit {
   getError(controlName:string){
     let error = null;
     const control = this.form.get(controlName);
-    if(control?.errors != null){
+    if(control?.errors != null ){
       error = control?.errors;
     }
 
     return error;
+  }
+
+  resetForm(){
+    this.form.reset();
   }
 
   get nombre(): AbstractControl | null { return this.form.get('nombre')};

@@ -82,6 +82,10 @@
       Guardar
     </button>
 
+    <button class="btn btn-danger col-md-4 mx-auto mt-4" (click)="resetForm()">
+      Limpiar
+    </button>
+
     <span>
       <pre>Contraseña : {{ getError("pass") | json }}</pre>
     </span>
