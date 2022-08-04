@@ -12,6 +12,7 @@
           formControlName="nombre"
         />
       </div>
+      <small *ngIf="usuarioRequired" class="text-danger"> Es Requerido </small>
     </div>
     <div class="row form-group mt-2">
       <label class="col-2">Apellido:</label>
@@ -25,6 +26,28 @@
       </div>
     </div>
     <div class="row form-group mt-2">
+      <label class="col-2">Email:</label>
+      <div class="col-8">
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          formControlName="email"
+        />
+      </div>
+    </div>
+    <div class="row form-group mt-2">
+      <label class="col-2">Contraseña:</label>
+      <div class="col-8">
+        <input
+          type="password"
+          class="form-control"
+          name="pass"
+          formControlName="pass"
+        />
+      </div>
+    </div>
+    <div class="row form-group mt-2">
       <label class="col-2">Paises:</label>
       <div class="col-8">
         <select class="form-control" formControlName="pais">
@@ -34,8 +57,33 @@
         </select>
       </div>
     </div>
+    <div formGroupName="direccion">
+      <h5>Direccion</h5>
+      <label class="col-2">Calle:</label>
+      <div class="col-8">
+        <input
+          type="text"
+          class="form-control"
+          name="calle"
+          formControlName="calle"
+        />
+      </div>
+      <label class="col-2">Avenida:</label>
+      <div class="col-8">
+        <input
+          type="text"
+          class="form-control"
+          name="avenida"
+          formControlName="avenida"
+        />
+      </div>
+    </div>
     <button class="btn btn-primary col-md-4 mx-auto mt-4" (click)="guardar()">
       Guardar
     </button>
+
+    <span>
+      <pre>Contraseña : {{ getError("pass") | json }}</pre>
+    </span>
   </div>
 </form>
