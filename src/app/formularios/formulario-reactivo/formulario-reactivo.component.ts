@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-reactivo',
@@ -7,12 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioReactivoComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup = new FormGroup({});
+
+  constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
   }
 
+  buildForm(){
+    this.form = this.formBuilder.group({
+      nombre : [''],
+      apellido: [''],
+      pais: ['']
+    });
+  }
+
   guardar(){
-    
+
   }
 }
