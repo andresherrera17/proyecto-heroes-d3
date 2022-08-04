@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -13,7 +13,9 @@ export class FormularioReactivoComponent implements OnInit {
   constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.buildForm();
   }
+
 
   buildForm(){
     this.form = this.formBuilder.group({
@@ -24,6 +26,6 @@ export class FormularioReactivoComponent implements OnInit {
   }
 
   guardar(){
-
+    console.log(this.form);
   }
 }

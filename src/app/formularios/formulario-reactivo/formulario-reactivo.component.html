@@ -1,23 +1,33 @@
 <h4>Formulario Reactivo</h4>
 <hr />
-<form>
+<form [formGroup]="form">
   <div class="row justify-aling-center">
     <div class="row form-group">
       <label class="col-2">Nombre:</label>
       <div class="col-8">
-        <input type="text" class="form-control" name="nombre" />
+        <input
+          type="text"
+          class="form-control"
+          name="nombre"
+          formControlName="nombre"
+        />
       </div>
     </div>
     <div class="row form-group mt-2">
       <label class="col-2">Apellido:</label>
       <div class="col-8">
-        <input type="text" class="form-control" name="apellido" />
+        <input
+          type="text"
+          class="form-control"
+          name="apellido"
+          formControlName="apellido"
+        />
       </div>
     </div>
     <div class="row form-group mt-2">
       <label class="col-2">Paises:</label>
       <div class="col-8">
-        <select class="form-control">
+        <select class="form-control" formControlName="pais">
           <option selected>Seleccione</option>
           <option value="1">Colombia</option>
           <option value="2">Argentina</option>
