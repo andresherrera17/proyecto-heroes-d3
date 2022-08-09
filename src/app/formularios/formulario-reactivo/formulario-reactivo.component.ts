@@ -25,7 +25,6 @@ export class FormularioReactivoComponent implements OnInit {
   getPaises(){
     this._servicePais.getPaises().subscribe((data: any[]) => {
       this.paises = data;
-      console.log(this.paises);
     });
   }
 

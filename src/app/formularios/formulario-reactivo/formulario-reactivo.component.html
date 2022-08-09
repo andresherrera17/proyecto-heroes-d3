@@ -51,9 +51,10 @@
       <label class="col-2">Paises:</label>
       <div class="col-8">
         <select class="form-control" formControlName="pais">
-          <option selected>Seleccione</option>
-          <option value="1">Colombia</option>
-          <option value="2">Argentina</option>
+          <option selected value="">Seleccione...</option>
+          <option *ngFor="let element of paises" [value]="element.codigo">
+            {{ element.name }}
+          </option>
         </select>
       </div>
     </div>
