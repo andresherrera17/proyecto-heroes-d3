@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { IPersona } from '../interfaces/persona.interface';
 
 @Injectable({
@@ -12,6 +12,10 @@ export class LoginService {
 
   constructor() {
     this.usuario$ = new Subject();
+  }
+
+  getUsuario$(): Observable<IPersona> {
+    return this.usuario$.asObservable();
   }
 
   login(persona:IPersona){

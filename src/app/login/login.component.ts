@@ -9,16 +9,14 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  usuario:IPersona = {} as IPersona;
+
   constructor(private _serviceLogin: LoginService) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    let usuario:IPersona = {
-      nombre: 'Andres',
-      apellido: 'Herrera'
-    }
-    this._serviceLogin.login(usuario);
+    this._serviceLogin.login(this.usuario);
   }
 }
