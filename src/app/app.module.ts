@@ -14,6 +14,7 @@ import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { FormularioNgmodelComponent } from './formularios/formulario-ngmodel/formulario-ngmodel.component';
 import { FormularioReactivoComponent } from './formularios/formulario-reactivo/formulario-reactivo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeroesModule } from './heroes/heroes.module';
 
 //Decorador: Empieza con @, es una funcion comun y corriente
 @NgModule({
@@ -36,7 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     FormsModule, // NgModel
     ReactiveFormsModule, // formularios reactivos,
-    HttpClientModule // Peticiones backend
+    HttpClientModule // Peticiones backend,
   ],
   //Declarar nuestros servicios
   providers: [],

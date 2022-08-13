@@ -19,6 +19,9 @@ const routes: Routes = [
     path:'form/reactivo', component: FormularioReactivoComponent
   },
   {
+    path:'heroes', loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)
+  },
+  {
     path:'**', pathMatch:'full', redirectTo: "pipes"
   }
 ];
