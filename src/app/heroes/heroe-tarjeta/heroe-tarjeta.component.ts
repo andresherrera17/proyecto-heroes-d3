@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IHeroe } from 'src/app/interfaces/heroe.interface';
 
 @Component({
   selector: 'app-heroe-tarjeta',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroe-tarjeta.component.css']
 })
 export class HeroeTarjetaComponent implements OnInit {
+
+  @Input() heroes: IHeroe[] = {} as IHeroe[];
 
   constructor() { }
 
