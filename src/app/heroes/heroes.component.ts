@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IHeroe } from '../interfaces/heroe.interface';
+import { uid } from 'uid';
 
 @Component({
   selector: 'app-heroes',
@@ -29,8 +30,8 @@ export class HeroesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
-    
+    let id = uid();
+    alert(id);
   }
 
 }
