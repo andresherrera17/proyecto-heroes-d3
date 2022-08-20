@@ -17,12 +17,13 @@ export class HeroeComponent implements OnInit {
     private router: Router,
     private activedRouter: ActivatedRoute
   ) {
-    this.activedRouter.params.subscribe(params => {
-      this.hero = this._serviceHeroe.getHerobyId(params["id"]) || {} as IHeroe;
-    })
+    
   }
 
   ngOnInit(): void {
+    this.activedRouter.params.subscribe(params => {
+      this.hero = this._serviceHeroe.getHerobyId(params["id"]) || {} as IHeroe;
+    })
   }
 
   regresar(){
