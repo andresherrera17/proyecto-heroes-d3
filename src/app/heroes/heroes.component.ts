@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IHeroe } from '../interfaces/heroe.interface';
-import { uid } from 'uid';
+import { HeroesService } from '../services/heroes.service';
 
 @Component({
   selector: 'app-heroes',
@@ -9,29 +9,22 @@ import { uid } from 'uid';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes: IHeroe[] = [
-    {
-      nombre: 'Daredevil',
-      descripcion: 'Superheroe',
-      img: 'assets/img/daredevil.png',
-      aparicion: '1964-01-01',
-      casa:'Marvel'
-    },
-    {
-      nombre: 'Superman',
-      descripcion: 'Superheroe',
-      img: 'assets/img/daredevil.png',
-      aparicion: '1964-01-01',
-      casa:'Marvel'
-    }
-  ];
+  heroes: IHeroe[] = [];
 
   
-  constructor() { }
+  constructor(private _serviceHeroes: HeroesService) { }
 
   ngOnInit(): void {
-    let id = uid();
-    alert(id);
+    this.getHeroes();
+    if(this.heroes.length == 0){
+      this.heroes = this._serviceHeroes.heroes;
+    }
+  }
+
+  getHeroes(){
+    this._serviceHeroes.getHeroes$().subscribe(data => {
+      this.heroes = data;
+    });
   }
 
 }

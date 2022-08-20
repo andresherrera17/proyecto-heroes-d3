@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IHeroe } from 'src/app/interfaces/heroe.interface';
+import { HeroesService } from 'src/app/services/heroes.service';
+import { uid } from 'uid';
 
 @Component({
   selector: 'app-heroe-form',
@@ -16,20 +18,17 @@ export class HeroeFormComponent implements OnInit {
     casa:'Marvel'
   }
 
-  arreglo = [ 
-    {nombre:'Andres'},
-    {nombre:'Tomas'},
-    {nombre:'Juan'} 
-  ]
 
-  constructor() { }
+  constructor(private _serviceHeroes: HeroesService) { }
 
   ngOnInit(): void {
-
-    this.arreglo.find(x => x.nombre === 'Andres');
-    console.log(this.arreglo);
   }
 
+  addHeroe(){
+    let hero: IHeroe = { ...this.heroe, id: uid() }
+    console.log(hero);
+    this._serviceHeroes.addHeroe(hero);
+  }
 
 
 

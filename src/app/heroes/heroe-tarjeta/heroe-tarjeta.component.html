@@ -1,6 +1,4 @@
-<h6 *ngFor="let her of heroes">{{ her.nombre }}</h6>
-
-*Terminar los styles de las tarjetas *Los heroes deben tener un id unico (uid)
-*el compponente de heroe tiene que recibir un parametro por url y mostrarlo en
-un console.log *Buscar como enviar y recibir parametros por url en angular *NO
-AGREGAR EL ID EN EL FORMULARIO
+<div *ngFor="let her of heroes">
+  <h6>{{ her.id }} - {{ her.nombre }}</h6>
+  <button class="btn btn-info" (click)="verMas(her)">ver más</button>
+</div>

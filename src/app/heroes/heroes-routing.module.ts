@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     children:[
       {
-        path:'heroe', component: HeroeComponent
+        path:'heroe/:id', component: HeroeComponent
       },
       {
         path:'', component: HeroesComponent
